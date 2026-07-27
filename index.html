@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FlyRank ML Internship Capstone Research Paper</title>
+<style>
+body{font-family:Arial,Helvetica,sans-serif;max-width:980px;margin:auto;padding:40px;line-height:1.7;color:#222;background:#fafafa}
+h1,h2{color:#124b9b}
+section{background:#fff;padding:20px;margin:18px 0;border-radius:8px;box-shadow:0 1px 4px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse}
+th,td{border:1px solid #ccc;padding:10px}
+th{background:#eef4ff}
+footer{margin-top:30px;font-size:.95em;color:#555}
+</style>
+</head>
+<body>
+
+<h1>Improving Content Prioritization Using Search Performance Signals</h1>
+<p><strong>FlyRank ML Internship Capstone Research Paper</strong></p>
+
+<section>
+<h2>Abstract</h2>
+<p>This research investigates whether search performance metrics can help prioritize web content for optimization. A transparent rule-based baseline was first created and then compared with a Decision Tree classifier using the FlyRank ML Internship dataset. The analysis used search impressions, clicks, and average search position as input features together with an honest train/test validation design. The model demonstrated useful measured patterns relative to the baseline on the educational dataset. These findings are intended for decision-support and should not be interpreted as evidence of production performance.</p>
+</section>
+
+<section>
+<h2>Introduction / Problem Statement</h2>
+<p>Content teams often manage thousands of pages, making manual prioritization difficult. This project explores whether historical search-performance signals can help identify pages that deserve human review for content improvement. The objective is to support better decision making rather than automate publishing decisions.</p>
+</section>
+
+<section>
+<h2>Data</h2>
+<ul>
+<li><strong>Dataset:</strong> FlyRank ML Internship Dataset (March 2026 release)</li>
+<li><strong>Main table:</strong> <code>fact_content_daily_performance</code></li>
+<li><strong>Features:</strong> gsc_impressions, gsc_clicks, gsc_avg_position</li>
+<li><strong>Privacy:</strong> No client names, URLs, or private search queries were included.</li>
+</ul>
+</section>
+
+<section>
+<h2>Methodology</h2>
+<ul>
+<li>Built a rule-based baseline using search-performance thresholds.</li>
+<li>Trained a Decision Tree classifier using the selected features.</li>
+<li>Used an 80/20 train-test split for evaluation.</li>
+<li>Performed a leakage review to avoid intentionally using future-window or target-derived information.</li>
+<li>Compared the machine-learning model against the baseline using the same evaluation approach.</li>
+</ul>
+</section>
+
+<section>
+<h2>Results (Model vs Baseline)</h2>
+<table>
+<tr><th>Approach</th><th>Summary</th></tr>
+<tr><td>Rule-Based Baseline</td><td>Provides transparent ranking using predefined thresholds.</td></tr>
+<tr><td>Decision Tree</td><td>Captured additional measured patterns while remaining interpretable.</td></tr>
+</table>
+<p>The observed results suggest that the Decision Tree can support prioritization more effectively than the simple baseline within the educational dataset. Further validation would be required before production use.</p>
+</section>
+
+<section>
+<h2>Limitations</h2>
+<ul>
+<li>Educational target label rather than a production label.</li>
+<li>Limited feature set.</li>
+<li>Seasonality and external marketing factors were not modeled.</li>
+<li>Results should be interpreted as directional and decision-support only.</li>
+</ul>
+</section>
+
+<section>
+<h2>Ranked Recommendations</h2>
+<ol>
+<li><strong>HIGH_IMPRESSIONS_LOW_CLICKS</strong> → Refresh content and improve titles or descriptions.</li>
+<li><strong>LOW_VISIBILITY</strong> → Improve on-page SEO and keyword targeting.</li>
+<li><strong>REVIEW_CONTENT</strong> → Perform manual editorial review before taking action.</li>
+</ol>
+<p><strong>Human review is required before implementing any recommendation.</strong></p>
+</section>
+
+<section>
+<h2>Reproducibility</h2>
+<p>The complete notebooks, code, and supporting artifacts are available in the accompanying GitHub repository. The work follows the sequence of baseline creation, modeling, validation, and action playbook development completed during the internship.</p>
+</section>
+
+<section>
+<h2>Acknowledgments & Data Credit</h2>
+<p>Built on the <strong>FlyRank ML Internship Dataset</strong>. Data credit: <a href="https://flyrank.ai">https://flyrank.ai</a>.</p>
+</section>
+
+<footer>
+<p>Prepared as part of the FlyRank Machine Learning Internship Capstone Project.</p>
+</footer>
+
+</body>
+</html>
